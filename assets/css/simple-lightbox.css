@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/li/icons.woff2?027acaca75530db637c28f68cd074955") format("woff2"),
+    url("../fonts/li/icons.woff?027acaca75530db637c28f68cd074955") format("woff"),
+    url("../fonts/li/icons.svg?027acaca75530db637c28f68cd074955#icons") format("svg");
+}
+
+i {
+  line-height: 1;
+}
+
+i[class^="li-"]:before,
+i[class*=" li-"]:before {
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.li-close:before {
+  content: "\f101";
+}
+.li-left-arrow:before {
+  content: "\f102";
+}
+.li-right-arrow:before {
+  content: "\f103";
+}                     
+                                                         
+.lightbox-content-blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal {
+  background-color: #fff;
+  overflow: visible !important;
+  position: relative;
+  padding: 8px;
+  /* padding-top: 32px; */
+}
+
+.lightbox-modal .li-close {
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+.lightbox-modal .lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 64px;
+
+  color: #fff;
+  font-size: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-modal .lightbox-nav-btn i {
+  cursor: pointer;
+  transform: translateY(3px);
+}
+
+.lightbox-modal .lightbox-previous-btn {
+  left: 8px;
+}
+
+.lightbox-modal .lightbox-next-btn {
+  right: 8px;
+}
+
+.lightbox-modal .lightbox-preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  background: url("../preloader.svg");
+}
+
+.lightbox-modal img {
+  display: block;
+  width: 100%;
+}

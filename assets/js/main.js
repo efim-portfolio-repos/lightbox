@@ -1,0 +1,1 @@
+$(".wl-lightbox").lightbox();
